@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.scss';
 import {
-  BrowserRouter, Routes, Route, NavLink, useParams,
+  NavLink, useParams, RouterProvider, createBrowserRouter, Outlet,
 } from 'react-router-dom';
 
 function Nav() {
@@ -11,30 +11,31 @@ function Nav() {
       <ul>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/test/id1">test id1</NavLink></li>
-        <li><NavLink to="/test/id2">test id2</NavLink></li>
+        <li><NavLink to="/test/id1">Test ID1</NavLink></li>
+        <li><NavLink to="/test/id2">Test ID2</NavLink></li>
       </ul>
     </nav>
   );
 }
 
-function App() {
+// New EC Function
+function Layout() {
   return (
-    <BrowserRouter>
-      <div>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/test/:id" element={<Test />} />
-          <Route path="*" element={<FallBack />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <>
+      <Nav />
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
 }
-function FallBack() {
-  return <div>URL Not Found</div>;
+
+function Welcome() {
+  return <div>Welcome</div>;
+}
+
+function About() {
+  return <div>All there is to know about me</div>;
 }
 
 function Test() {
@@ -42,12 +43,23 @@ function Test() {
   return <div>ID: {id}</div>;
 }
 
-function Welcome() {
-  return <div>Welcome</div>;
-}
-function About() {
-  return <div>All there is to know about me</div>;
+function FallBack() {
+  return <div>URL Not Found</div>;
 }
 
+// Doing the EC stuff
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { index: true, element: <Welcome /> },
+      { path: 'about', element: <About /> },
+      { path: 'test/:id', element: <Test /> },
+      { path: '*', element: <FallBack /> },
+    ],
+  },
+]);
+
 const root = createRoot(document.getElementById('main'));
-root.render(<App />);
+root.render(<RouterProvider router={router} />);
