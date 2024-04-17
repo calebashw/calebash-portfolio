@@ -1,10 +1,8 @@
-import React, {
-  useParams,
-} from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.scss';
 import {
-  BrowserRouter, Routes, Route, NavLink,
+  BrowserRouter, Routes, Route, NavLink, useParams,
 } from 'react-router-dom';
 
 function Nav() {
@@ -29,7 +27,7 @@ function App() {
           <Route path="/" element={<Welcome />} />
           <Route path="/about" element={<About />} />
           <Route path="/test/:id" element={<Test />} />
-          <Route path="*" element={<FallBack />} />;
+          <Route path="*" element={<FallBack />} />
         </Routes>
       </div>
     </BrowserRouter>
