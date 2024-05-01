@@ -1,0 +1,41 @@
+.slider {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .slides {
+    display: flex;
+    width: 800%;
+    animation: slide 30s linear infinite;
+  }
+  
+  .slide {
+    flex: 0 0 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    font-size: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .65);
+  }
+  .slide img {
+    width: auto;
+    height: 85%;
+    vertical-align: middle;
+  }
+  .label {
+    font-size: 24px;
+    color: white;
+    margin-left: 5px;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); // Move only 50% to let duplicated items scroll in seamlessly
+    }
+  }
+  

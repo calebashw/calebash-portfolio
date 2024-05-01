@@ -1,0 +1,47 @@
+/* line 1, ../sass/SlidingSection.scss */
+.slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 6, ../sass/SlidingSection.scss */
+.slides {
+  display: flex;
+  width: 800%;
+  animation: slide 30s linear infinite;
+}
+
+/* line 12, ../sass/SlidingSection.scss */
+.slide {
+  flex: 0 0 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  font-size: 50px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+/* line 22, ../sass/SlidingSection.scss */
+.slide img {
+  width: auto;
+  height: 85%;
+  vertical-align: middle;
+}
+
+/* line 27, ../sass/SlidingSection.scss */
+.label {
+  font-size: 24px;
+  color: white;
+  margin-left: 5px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

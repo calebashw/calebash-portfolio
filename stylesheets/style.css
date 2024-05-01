@@ -1,0 +1,395 @@
+/* line 3, ../sass/style.scss */
+body, html {
+  font-family: "Roboto", sans-serif;
+  background-color: #180544;
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* line 16, ../sass/style.scss */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* line 29, ../sass/style.scss */
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-right: 300px;
+}
+
+/* line 35, ../sass/style.scss */
+.logo {
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
+  /* Prevent logo from shrinking */
+}
+
+/* line 42, ../sass/style.scss */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 50, ../sass/style.scss */
+main {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 40px;
+  padding: 40px;
+}
+
+/* line 57, ../sass/style.scss */
+:root {
+  text-size-adjust: 100%;
+}
+
+/* line 60, ../sass/style.scss */
+nav {
+  display: flex;
+  background-color: #148fed;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  padding: 10px 0;
+  font-size: 30px;
+  height: 40px;
+  color: white;
+  transition: background-color 0.5s ease;
+  /* Smooth transition for background color */
+  z-index: 1000;
+}
+
+/* line 77, ../sass/style.scss */
+nav ul li.active {
+  background-color: #7fbdec;
+}
+
+/* line 82, ../sass/style.scss */
+nav ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+}
+
+/* line 90, ../sass/style.scss */
+nav ul li {
+  transition: background-color 0.3s ease;
+}
+
+/* line 94, ../sass/style.scss */
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 104, ../sass/style.scss */
+li {
+  margin: 0 10px;
+  width: 100%;
+}
+/* line 106, ../sass/style.scss */
+li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 112, ../sass/style.scss */
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+/* line 118, ../sass/style.scss */
+.welcome-section h1 {
+  color: white;
+  margin: 0 40px 0 40px;
+}
+
+/* line 122, ../sass/style.scss */
+.about-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* line 127, ../sass/style.scss */
+.about-header {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: white;
+}
+
+/* line 133, ../sass/style.scss */
+.about-section {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 18px;
+  font-size: 25px;
+  color: white;
+}
+
+/* line 143, ../sass/style.scss */
+.skills-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  color: white;
+  animation: skills-header 6s linear infinite;
+  background-color: black;
+  width: 30%;
+  font-size: 40px;
+  font-weight: 500;
+  padding: 5px 0;
+  border-radius: 6px;
+}
+
+@keyframes skills-header {
+  0%, 100% {
+    color: red;
+  }
+  17% {
+    color: orange;
+  }
+  34% {
+    color: yellow;
+  }
+  51% {
+    color: green;
+  }
+  68% {
+    color: blue;
+  }
+  85% {
+    color: indigo;
+  }
+}
+/* line 178, ../sass/style.scss */
+.project-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid white;
+  margin: 20px 20px 0 20px;
+  padding: 20px;
+  animation: rainbow-border 4s linear infinite;
+}
+
+@keyframes rainbow-border {
+  0% {
+    border-color: red;
+  }
+  16% {
+    border-color: orange;
+  }
+  33% {
+    border-color: yellow;
+  }
+  50% {
+    border-color: green;
+  }
+  66% {
+    border-color: blue;
+  }
+  83% {
+    border-color: indigo;
+  }
+  100% {
+    border-color: violet;
+  }
+}
+/* line 198, ../sass/style.scss */
+.project-section h1 {
+  color: white;
+  font-size: 50px;
+}
+
+/* line 202, ../sass/style.scss */
+.project-section p {
+  color: white;
+  font-size: 20px;
+}
+
+/* line 206, ../sass/style.scss */
+.project-section ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 214, ../sass/style.scss */
+.project-section li {
+  color: white;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+/* line 221, ../sass/style.scss */
+.project-section h2 {
+  text-align: center;
+  width: 100%;
+}
+
+/* line 225, ../sass/style.scss */
+.tweet-button {
+  border-radius: 5px;
+  width: 160px;
+  height: 50px;
+}
+
+/* line 232, ../sass/style.scss */
+.trapdoor {
+  -webkit-transform: translateZ(0px);
+  /* Chrome, Safari */
+  -moz-transform: translateZ(0px);
+  /* Older Firefox browsers */
+  -ms-transform: translateZ(0px);
+  /* IE 9 */
+  -o-transform: translateZ(0px);
+  /* Older Opera browsers */
+  transform: translateZ(0px);
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -25px;
+  width: 200px;
+  height: 50px;
+  box-shadow: inset -7px 0px 12px -8px rgba(0, 0, 0, 0.3), inset 7px 0px 12px -8px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: background 400ms ease-in-out;
+  -moz-transition: background 400ms ease-in-out;
+  -ms-transition: background 400ms ease-in-out;
+  -o-transition: background 400ms ease-in-out;
+  transition: background 400ms ease-in-out;
+}
+/* line 254, ../sass/style.scss */
+.trapdoor:hover {
+  background: #fff;
+}
+/* line 257, ../sass/style.scss */
+.trapdoor:hover .door {
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  -o-transform: scale(1.08);
+  transform: scale(1.08);
+}
+/* line 266, ../sass/style.scss */
+.trapdoor:hover .top {
+  top: -50%;
+}
+/* line 270, ../sass/style.scss */
+.trapdoor:hover .bottom {
+  top: 100%;
+}
+/* line 275, ../sass/style.scss */
+.trapdoor .twitter-follow-button {
+  margin-left: -77px;
+  position: absolute !important;
+  margin-top: -14px;
+  left: 50%;
+  top: 50%;
+}
+
+/* line 284, ../sass/style.scss */
+.top {
+  top: 0%;
+  left: 0px;
+}
+/* line 288, ../sass/style.scss */
+.top:before {
+  top: 5px;
+}
+
+/* line 293, ../sass/style.scss */
+.bottom {
+  top: 50%;
+  left: 0px;
+}
+/* line 297, ../sass/style.scss */
+.bottom:before {
+  top: -20px;
+}
+
+/* line 302, ../sass/style.scss */
+.door {
+  -webkit-transition: top 400ms, box-shadow 200ms, -webkit-transform 300ms;
+  -moz-transition: top 400ms, box-shadow 200ms, -moz-transform 300ms;
+  -ms-transition: top 400ms, box-shadow 200ms, -ms-transform 300ms;
+  -o-transition: top 400ms, box-shadow 200ms, -o-transform 300ms;
+  transition: top 400ms, box-shadow 200ms, transform 300ms;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -ms-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  background-color: #fff;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  z-index: 2;
+  height: 50%;
+}
+/* line 320, ../sass/style.scss */
+.door:before {
+  font-family: 'tweet', sans-serif;
+  position: absolute;
+  margin-left: -20px;
+  font-size: 35px;
+  display: block;
+  color: #4099FF;
+  content: "\e000";
+  width: 0px;
+  height: 20px;
+  left: 52%;
+}
+
+@font-face {
+  font-family: 'tweet';
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/277/tweet.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
