@@ -20,7 +20,7 @@ footer {
     color: white;
     font-size: 14px;
   
-    // If you want to ensure the footer is at the bottom of the screen:
+    // To ensure the footer is at the bottom of the screen:
     margin-top: auto;
     display: flex;
     flex-direction: row;
@@ -32,6 +32,9 @@ footer ul {
     flex-direction: column;
     margin-right: 300px;
 }
+footer ul li:hover {
+  text-decoration: underline;
+}
 .logo {
     width: 100px;
     height: 100px;
@@ -40,12 +43,22 @@ footer ul {
     flex-shrink: 0; /* Prevent logo from shrinking */
 }
 section {
-    min-height: 100vh;
+    min-height: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
+img {
+  display: flex;
+  width: 60vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 17.5vw;
+}
 
 main {
     flex: 1;
@@ -59,15 +72,17 @@ main {
 }
 nav {
     display: flex;
-    background-color: rgb(20, 143, 237);
-    justify-content: space-around;
+    background-color: rgba(20, 143, 237, .4);
+    justify-content: flex-start;
     align-items: center;
     width: 100vw;
     padding: 10px 0;
     font-size: 30px;
+    position: fixed;
     height: 40px;
+
     color: rgba(255, 255, 255, 1);
-    transition: background-color 0.5s ease; /* Smooth transition for background color */
+    transition: background-color 0.5s ease;
     z-index: 1000;
 }
 // nav:hover {
@@ -75,8 +90,12 @@ nav {
 //     color: rgb(193, 190, 190);
 // }
 nav ul li.active {
-    background-color: rgb(127, 189, 236); // Lighter color for active link
+    background-color: rgba(127, 189, 236, .4); // Lighter color for active link
     // border-radius: 5px; // Optional, for rounded corners
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-around;
   }
   
   nav ul li a {
@@ -89,12 +108,14 @@ nav ul li.active {
   
   nav ul li {
     transition: background-color 0.3s ease; // Smooth transition for background color
+    display: flex;
+    justify-content: space-between;
   }
 
 ul {
     display: flex;
     list-style: none;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     margin: 0;
@@ -114,6 +135,7 @@ li {
     justify-content: center;
     width: 100%;
     align-items: center;
+    margin-bottom: 20vh;
 }
 .welcome-section h1 {
     color: white;
@@ -136,7 +158,7 @@ li {
 .about-section {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 40vh;
     width: 60%;
     margin: 0 auto;
     margin-top: 18px;
@@ -151,10 +173,11 @@ li {
     color: white;
     animation: skills-header 6s linear infinite;
     background-color: black;
-    width: 30%;
+    width: 33vw;
     font-size: 40px;
     font-weight: 500;
     padding: 5px 0;
+    margin-left: 30vw;
     border-radius: 6px;
 }
 
@@ -194,7 +217,7 @@ li {
   justify-content: center;
   text-align: center;
   border: 5px solid white;
-  margin: 20px 20px 0 20px;
+  margin: 120px 20px 0 20px;
   padding: 20px;
   animation: rainbow-border 4s linear infinite;
 }
