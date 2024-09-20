@@ -338,10 +338,6 @@ function App() {
             </li>
           </ul>
         </section>
-        <section id="fallback" className="fallback-section">
-          <h1>URL Not Found</h1>
-          <p>If you were expecting something here, its not available.</p>
-        </section>
       </main>
       <footer>
         <p>© {new Date().getFullYear()} Built from scratch by Caleb Ash.</p>

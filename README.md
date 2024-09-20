@@ -1,13 +1,3 @@
-# Title
+# Welcome to my porfolio!
 
-*description*
-
-[deployed url](http://url-if-deployed-here)
-
-## What Worked Well
-
-## What Didn't
-
-## Extra Credit
-
-## Screenshots
+*I am Caleb Ash, a computer science student at Dartmouth College, and this is the github repo for my personal porfolio*
